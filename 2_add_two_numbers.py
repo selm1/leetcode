@@ -2,10 +2,13 @@
 from typing import Optional
 
 # Definition for singly-linked list.
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
-       self.val = val
-       self.next = next
+        self.val = val
+        self.next = next
+
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
@@ -24,10 +27,11 @@ class Solution:
             tail = tail.next
             l1 = l1.next if l1 != None else None
             l2 = l2.next if l2 != None else None
-        
+
         result = dummy_head.next
         dummy_head.next = None
         return result
+
 
 s = Solution()
 l1 = ListNode(val=2, next=ListNode(val=4, next=ListNode(val=3)))
